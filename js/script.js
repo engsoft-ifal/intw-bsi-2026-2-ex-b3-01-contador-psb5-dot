@@ -8,3 +8,26 @@
 //       elemento.textContent = valor.
 
 // escreva seu código aqui
+const totalEl = document.querySelector("#total");
+const btnSomar = document.querySelector("#somar");
+const btnZerar = document.querySelector("#zerar");
+
+let valor = 0;
+
+
+function atualizarTela() {
+  totalEl.textContent = valor;
+}
+
+atualizarTela();
+
+
+btnSomar.addEventListener("click", () => {
+  valor += 1;
+  atualizarTela();
+});
+
+btnZerar.addEventListener("click", () => {
+  valor = 0;
+  atualizarTela();
+});
